@@ -1,10 +1,10 @@
 pipeline {
-    agent any
+    agent { label 'master' }
     stages {
         stage('Build') {
             steps {
                 sh 'echo "Hello World"'
-		sh test1.sh
+		sh './test1.sh'
             }
         }
     }
